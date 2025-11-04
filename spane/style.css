@@ -1,0 +1,180 @@
+/* BASIC RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  color: #333;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #004d40;
+  color: white;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1rem;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* HAMBURGER MENU */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    display: none;
+    background: #004d40;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+  }
+
+  #menu-toggle:checked + .hamburger + nav ul {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+/* HERO SECTION */
+.hero {
+  background: #e0f2f1;
+  text-align: center;
+  padding: 5rem 2rem;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.hero .btn {
+  display: inline-block;
+  background: #004d40;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  margin-top: 1rem;
+  border-radius: 4px;
+}
+
+/* CONTENT */
+.content {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.content .column {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+}
+
+/* SERVICES */
+.service-cards {
+  display: flex;
+  gap: 1.5rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1 1 30%;
+  background: #f1f1f1;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.card h2 {
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 100%;
+  }
+}
+
+/* CONTACT */
+.contact form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 2rem auto;
+}
+
+.contact label {
+  margin-top: 1rem;
+}
+
+.contact input,
+.contact textarea {
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border: 1px solid #ccc;
+}
+
+.contact button {
+  margin-top: 1rem;
+  background: #004d40;
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  cursor: pointer;
+}
+
+.company-info {
+  text-align: center;
+  margin: 2rem;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  background: #004d40;
+  color: white;
+  padding: 1rem;
+  margin-top: 2rem;
+}
